@@ -30,7 +30,7 @@ end
 after "deploy", "rvm:trust_rvmrc"
 
 before "deploy:update_code", "toldo:compress_assets"
-after "deploy:symlink", "toldo:upload_assets"
+after "deploy:create_symlink", "toldo:upload_assets"
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
