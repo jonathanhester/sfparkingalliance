@@ -16,7 +16,7 @@ module Parking
     # -- all .rb files in that directory are automatically loaded.
 
     # Custom directories with classes and modules you want to be autoloadable.
-    # config.autoload_paths += %W(#{config.root}/extras)
+    config.autoload_paths += %W(#{config.root}/lib)
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -60,3 +60,6 @@ module Parking
     config.assets.version = '1.0'
   end
 end
+
+ENV['TWILIO_SID'] = "AC9a3361f701b0e78280626b4948d269b3"
+ENV['TWILIO_TOKEN'] = "a2c99041a3f97f9e3e78d7111eebbad6"

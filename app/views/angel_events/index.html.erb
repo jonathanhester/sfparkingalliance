@@ -1,0 +1,29 @@
+<h1>Listing angel_events</h1>
+
+<table>
+  <tr>
+    <th>Phone</th>
+    <th>Code</th>
+    <th>Status</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @angel_events.each do |angel_event| %>
+  <tr>
+    <td><%= angel_event.phone %></td>
+    <td><%= angel_event.code %></td>
+    <td><%= angel_event.status %></td>
+    <td><%= angel_event.user_id %></td>
+    <td><%= link_to 'Show', angel_event %></td>
+    <td><%= link_to 'Edit', edit_angel_event_path(angel_event) %></td>
+    <td><%= link_to 'Destroy', angel_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Angel event', new_angel_event_path %>

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307092225) do
+ActiveRecord::Schema.define(:version => 20130320062304) do
+
+  create_table "angel_events", :force => true do |t|
+    t.string   "phone"
+    t.string   "code"
+    t.string   "status"
+    t.integer  "user_id"
+    t.string   "sms_sid"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -29,50 +40,13 @@ ActiveRecord::Schema.define(:version => 20130307092225) do
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
-  create_table "devices", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "device_id"
-    t.string   "registration_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
-  add_index "devices", ["user_id"], :name => "index_devices_on_user_id"
-
-  create_table "friend_events", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "fbid"
-    t.string   "name"
-    t.string   "event"
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "phone"
+    t.string   "code"
+    t.text     "address"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  add_index "friend_events", ["user_id"], :name => "index_friend_events_on_user_id"
-
-  create_table "friends", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "fbid"
-    t.string   "name"
-    t.datetime "status_modified_date"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
-    t.string   "status"
-  end
-
-  add_index "friends", ["user_id", "fbid"], :name => "index_friends_on_user_id_and_fbid"
-
-  create_table "users", :force => true do |t|
-    t.string   "fbid"
-    t.string   "token"
-    t.datetime "token_invalid_date"
-    t.boolean  "token_invalid"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.datetime "last_synced"
-    t.string   "name"
-  end
-
-  add_index "users", ["fbid"], :name => "index_users_on_fbid"
 
 end

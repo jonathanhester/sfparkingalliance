@@ -67,14 +67,17 @@ namespace :toldo do
   end
 end
 
-set :delayed_job_args, "-n 2"
-require "delayed/recipes"
 
 set :rails_env, "production" #added for delayed job
 
-after "deploy:stop",    "delayed_job:stop"
-after "deploy:start",   "delayed_job:start"
-after "deploy:restart", "delayed_job:restart"
+#set :delayed_job_args, "-n 2"
+#require "delayed/recipes"
+#after "deploy:stop",    "delayed_job:stop"
+#after "deploy:start",   "delayed_job:start"
+#after "deploy:restart", "delayed_job:restart"
+
+
+
 after "deploy:update_code", "deploy:migrate"
 
 namespace :deploy do

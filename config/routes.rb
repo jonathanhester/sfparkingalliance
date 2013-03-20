@@ -1,4 +1,10 @@
 Parking::Application.routes.draw do
+  resources :angel_events
+
+  resources :users
+
+  resources :texts, only: [ :create ]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
