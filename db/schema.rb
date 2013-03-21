@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320062304) do
+ActiveRecord::Schema.define(:version => 20130321073644) do
 
   create_table "angel_events", :force => true do |t|
     t.string   "phone"
@@ -19,9 +19,10 @@ ActiveRecord::Schema.define(:version => 20130320062304) do
     t.string   "status"
     t.integer  "user_id"
     t.string   "sms_sid"
-    t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "message"
+    t.string   "response"
   end
 
   create_table "delayed_jobs", :force => true do |t|

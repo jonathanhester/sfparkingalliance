@@ -1,4 +1,7 @@
 Parking::Application.routes.draw do
+
+  root :to => 'application#index'
+
   resources :angel_events
 
   resources :users

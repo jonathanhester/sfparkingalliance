@@ -84,21 +84,21 @@ namespace :deploy do
   desc "Start the Thin processes"
   task :start do
     run  <<-CMD
-      /etc/init.d/thin start
+      /etc/init.d/thin_parking start
     CMD
   end
 
   desc "Stop the Thin processes"
   task :stop do
     run <<-CMD
-      /etc/init.d/thin stop
+      /etc/init.d/thin_parking stop
     CMD
   end
 
   desc "Restart the Thin processes"
   task :restart do
     run <<-CMD
-      /etc/init.d/thin restart
+      /etc/init.d/thin_parking restart
     CMD
   end
 end
