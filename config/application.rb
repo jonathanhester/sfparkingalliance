@@ -60,7 +60,7 @@ module Parking
     config.assets.version = '1.0'
 
     config.assets.precompile += [
-        "application.css"
+        "application.css.scss"
     ]
 
 
