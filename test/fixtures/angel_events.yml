@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: angel_events
+#
+#  id         :integer          not null, primary key
+#  phone      :string(255)
+#  code       :string(255)
+#  status     :string(255)
+#  user_id    :integer
+#  sms_sid    :string(255)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  message    :string(255)
+#  response   :string(255)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  phone: 8584423699
+  code: MyString
+  status: relayed
+  user: sfgiants_user
+
+two:
+  phone: MyString
+  code: MyString
+  status: MyString
+  user_id: 1

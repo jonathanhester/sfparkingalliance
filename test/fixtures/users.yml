@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  email      :string(255)
+#  phone      :string(255)
+#  code       :string(255)
+#  address    :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  license    :string(255)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+sfgiants_user:
+  email: MyString
+  phone: 8584423699
+  code: sfgiants
+  address: MyText
+
+two:
+  email: MyString
+  phone: MyString
+  code: MyString
+  address: MyText

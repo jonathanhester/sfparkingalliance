@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321073644) do
+ActiveRecord::Schema.define(:version => 20130522032655) do
 
   create_table "angel_events", :force => true do |t|
     t.string   "phone"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20130321073644) do
     t.text     "address"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "license"
   end
 
 end

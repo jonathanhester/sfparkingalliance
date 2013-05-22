@@ -9,5 +9,8 @@ class ActiveSupport::TestCase
   # -- they do not yet inherit this setting
   fixtures :all
 
+  #globally stub all Text.send_text calls because we never want to call it
+  Text.stubs(:send_text).raises(Exception, "Need to stub send_text")
+
   # Add more helper methods to be used by all tests here...
 end

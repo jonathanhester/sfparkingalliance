@@ -25,4 +25,4 @@ production:
   database: parking
   username: www-data
   password: hcUQLh9v
-  host: localhost
+  host: jonathanhester.com
