@@ -1,0 +1,22 @@
+%table.table-striped
+  %tr
+    %th Created
+    %th Phone
+    %th Code
+    %th Status
+    %th Message
+    %th User
+    %th
+    %th
+    %th
+  - angel_events.each do |angel_event|
+    %tr
+      %td= angel_event.created_at
+      %td= angel_event.phone
+      %td= angel_event.code
+      %td= angel_event.status
+      %td= angel_event.message
+      %td= link_to angel_event.user.code, user_path(angel_event.user_id)
+      %td= link_to 'Show', angel_event
+      %td= link_to 'Edit', edit_angel_event_path(angel_event)
+      %td= link_to 'Destroy', angel_event, method: :delete, data: { confirm: 'Are you sure?' }

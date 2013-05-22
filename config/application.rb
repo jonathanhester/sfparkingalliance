@@ -58,6 +58,18 @@ module Parking
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.assets.precompile += [
+        "application.css"
+    ]
+
+
+    config.generators do |g|
+      g.template_engine :haml
+      g.helper false
+      g.javascript_engine :coffee
+      g.stylesheet_engine :sass
+    end
   end
 end
 

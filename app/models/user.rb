@@ -13,6 +13,9 @@
 #
 
 class User < ActiveRecord::Base
+
+  has_many :angel_events
+
   attr_accessible :address, :code, :email, :phone, :license
 
   validates :phone, :uniqueness => { :case_sensitive => false }

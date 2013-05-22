@@ -65,3 +65,21 @@ Parking::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 end
+#== Route Map
+# Generated on 21 May 2013 21:13
+#
+#     angel_events GET    /angel_events(.:format)          angel_events#index
+#                  POST   /angel_events(.:format)          angel_events#create
+#  new_angel_event GET    /angel_events/new(.:format)      angel_events#new
+# edit_angel_event GET    /angel_events/:id/edit(.:format) angel_events#edit
+#      angel_event GET    /angel_events/:id(.:format)      angel_events#show
+#                  PUT    /angel_events/:id(.:format)      angel_events#update
+#                  DELETE /angel_events/:id(.:format)      angel_events#destroy
+#            users GET    /users(.:format)                 users#index
+#                  POST   /users(.:format)                 users#create
+#         new_user GET    /users/new(.:format)             users#new
+#        edit_user GET    /users/:id/edit(.:format)        users#edit
+#             user GET    /users/:id(.:format)             users#show
+#                  PUT    /users/:id(.:format)             users#update
+#                  DELETE /users/:id(.:format)             users#destroy
+#            texts POST   /texts(.:format)                 texts#create

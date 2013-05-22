@@ -1,0 +1,21 @@
+%p#notice= notice
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Phone:
+  = @user.phone
+%p
+  %b Code:
+  = @user.code
+%p
+  %b License:
+  = @user.license
+%p
+  %b Address:
+  = @user.address
+%h2 User Angel Events
+= render partial: "angel_events/events", locals: { angel_events: @user.angel_events }
+= link_to 'Edit', edit_user_path(@user)
+|
+\#{link_to 'Back', users_path}
