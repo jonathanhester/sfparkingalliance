@@ -1,0 +1,23 @@
+%p#notice= notice
+%p
+  %b Phone:
+  = @angel_event.phone
+%p
+  %b Code:
+  = @angel_event.code
+%p
+  %b Status:
+  = @angel_event.status
+%p
+  %b Message:
+  = @angel_event.message
+%p
+  %b Response:
+  = @angel_event.response
+
+%p
+  %b User:
+  = link_to @angel_event.user_id, admin_angel_event_path(@angel_event.user_id)
+= link_to 'Edit', edit_admin_angel_event_path(@angel_event)
+|
+\#{link_to 'Back', admin_angel_events_path}

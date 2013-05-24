@@ -1,4 +1,4 @@
-= form_for(@angel_event) do |f|
+= form_for([:admin, @angel_event]) do |f|
   - if @angel_event.errors.any?
     #error_explanation
       %h2

@@ -15,7 +15,7 @@
   %b Address:
   = @user.address
 %h2 User Angel Events
-= render partial: "angel_events/events", locals: { angel_events: @user.angel_events }
-= link_to 'Edit', edit_user_path(@user)
+= render partial: "admin/angel_events/events", locals: { angel_events: @user.angel_events }
+= link_to 'Edit', edit_admin_user_path(@user)
 |
-\#{link_to 'Back', users_path}
+\#{link_to 'Back', admin_users_path}

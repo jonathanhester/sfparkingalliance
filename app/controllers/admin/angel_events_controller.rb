@@ -1,4 +1,4 @@
-class AngelEventsController < ApplicationController
+class Admin::AngelEventsController < Admin::BaseController
   # GET /angel_events
   # GET /angel_events.json
   def index

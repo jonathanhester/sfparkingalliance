@@ -1,12 +1,16 @@
 Parking::Application.routes.draw do
 
-  root :to => 'application#index'
+  namespace :admin do
 
-  resources :angel_events
+    root :to => 'base#index'
 
-  resources :users
+    resources :angel_events
 
-  resources :texts, only: [ :create ]
+    resources :users
+
+    resources :texts, only: [ :create ]
+
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -66,20 +70,20 @@ Parking::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 end
 #== Route Map
-# Generated on 21 May 2013 21:13
+# Generated on 23 May 2013 20:40
 #
-#     angel_events GET    /angel_events(.:format)          angel_events#index
-#                  POST   /angel_events(.:format)          angel_events#create
-#  new_angel_event GET    /angel_events/new(.:format)      angel_events#new
-# edit_angel_event GET    /angel_events/:id/edit(.:format) angel_events#edit
-#      angel_event GET    /angel_events/:id(.:format)      angel_events#show
-#                  PUT    /angel_events/:id(.:format)      angel_events#update
-#                  DELETE /angel_events/:id(.:format)      angel_events#destroy
-#            users GET    /users(.:format)                 users#index
-#                  POST   /users(.:format)                 users#create
-#         new_user GET    /users/new(.:format)             users#new
-#        edit_user GET    /users/:id/edit(.:format)        users#edit
-#             user GET    /users/:id(.:format)             users#show
-#                  PUT    /users/:id(.:format)             users#update
-#                  DELETE /users/:id(.:format)             users#destroy
-#            texts POST   /texts(.:format)                 texts#create
+#     admin_angel_events GET    /admin/angel_events(.:format)          admin/angel_events#index
+#                        POST   /admin/angel_events(.:format)          admin/angel_events#create
+#  new_admin_angel_event GET    /admin/angel_events/new(.:format)      admin/angel_events#new
+# edit_admin_angel_event GET    /admin/angel_events/:id/edit(.:format) admin/angel_events#edit
+#      admin_angel_event GET    /admin/angel_events/:id(.:format)      admin/angel_events#show
+#                        PUT    /admin/angel_events/:id(.:format)      admin/angel_events#update
+#                        DELETE /admin/angel_events/:id(.:format)      admin/angel_events#destroy
+#            admin_users GET    /admin/users(.:format)                 admin/users#index
+#                        POST   /admin/users(.:format)                 admin/users#create
+#         new_admin_user GET    /admin/users/new(.:format)             admin/users#new
+#        edit_admin_user GET    /admin/users/:id/edit(.:format)        admin/users#edit
+#             admin_user GET    /admin/users/:id(.:format)             admin/users#show
+#                        PUT    /admin/users/:id(.:format)             admin/users#update
+#                        DELETE /admin/users/:id(.:format)             admin/users#destroy
+#            admin_texts POST   /admin/texts(.:format)                 admin/texts#create
