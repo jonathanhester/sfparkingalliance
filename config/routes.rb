@@ -1,5 +1,7 @@
 Parking::Application.routes.draw do
 
+  root :to => 'application#index'
+
   namespace :admin do
 
     root :to => 'base#index'
@@ -8,9 +10,9 @@ Parking::Application.routes.draw do
 
     resources :users
 
-    resources :texts, only: [ :create ]
-
   end
+
+  resources :texts, only: [ :create ]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
