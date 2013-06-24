@@ -34,7 +34,7 @@ class AngelEvent < ActiveRecord::Base
       angel_event.code = code
       angel_event.user = recipient
       angel_event.message = body
-      msg = "Heads up from a parking angel (respond with 0 if this is fake): #{body}"
+      msg = "Heads up from SF Parking Alliance (respond with 0 if this is fake): #{body}"
       Text.send_text(recipient.phone, msg)
       angel_event.status = :relayed
       angel_event.save
